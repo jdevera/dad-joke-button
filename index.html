@@ -89,7 +89,8 @@
     text-align: left;
   }
   footer .story-link:hover + .tooltip,
-  footer .tooltip:hover {
+  footer .tooltip:hover,
+  footer .tooltip.show {
     opacity: 1;
     pointer-events: auto;
     transform: translateX(-50%) translateY(0);
@@ -122,6 +123,15 @@
   <span class="story-link">💡 An idea by León.</span><span class="tooltip">I asked my son León: "If you could build a website or an app right now, what would you build?" He said: a big red button that gives you a dad joke every time you press it. So we built exactly that. 🎉</span> 🤖 Built with Claude.
 </footer>
 
+<script>
+document.querySelector(".story-link").addEventListener("click", (e) => {
+  e.stopPropagation();
+  document.querySelector(".tooltip").classList.toggle("show");
+});
+document.addEventListener("click", () => {
+  document.querySelector(".tooltip").classList.remove("show");
+});
+</script>
 <script src="jokes.js"></script>
 </body>
 </html>
