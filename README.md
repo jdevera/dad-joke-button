@@ -10,7 +10,7 @@ And so it was built. 🎉
 A gloriously simple website with one purpose: **a giant red button that delivers dad jokes on demand.**
 
 - 🔘 **One big red button** — that's it, that's the whole UI
-- 📦 **300 handcrafted dad jokes** — curated for maximum groan
+- 📦 **300 dad jokes** — curated for maximum groan
 - 🔀 **Shuffled every time** — no repeats until you've seen them all
 - 📱 **Mobile-friendly** — deliver dad jokes on the go
 - ⚡ **Zero dependencies** — pure HTML, CSS, and JavaScript
