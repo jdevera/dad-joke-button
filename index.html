@@ -62,6 +62,36 @@
     text-align: center;
     font-size: 0.7rem;
     color: #555;
+    position: relative;
+  }
+  footer .story-link {
+    cursor: default;
+    border-bottom: 1px dotted #555;
+  }
+  footer .tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    padding: 14px 16px;
+    background: #16213e;
+    color: #ccc;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-50%) translateY(6px);
+    text-align: left;
+  }
+  footer .story-link:hover + .tooltip,
+  footer .tooltip:hover {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
   }
   @media (max-width: 600px) {
     #joke-box {
@@ -87,7 +117,9 @@
   <button id="btn">Dad Joke</button>
 </main>
 
-<footer>💡 An idea by León. 🤖 Built with Claude.</footer>
+<footer>
+  <span class="story-link">💡 An idea by León.</span><span class="tooltip">I asked my son León: "If you could build a website or an app right now, what would you build?" He said: a big red button that gives you a dad joke every time you press it. So we built exactly that. 🎉</span> 🤖 Built with Claude.
+</footer>
 
 <script src="jokes.js"></script>
 </body>
